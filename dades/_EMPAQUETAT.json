@@ -1,0 +1,21 @@
+{
+ "data": "2026-09-24",
+ "fitxers": [
+  "lib/previsio.py",
+  "lib/avisos.py",
+  "lib/vigilancia.py",
+  "lib/radar.py",
+  "lib/md_html.py",
+  "lib/fma_base.py",
+  "executa.py",
+  "README.md",
+  ".github/workflows/previsio.yml",
+  ".gitignore",
+  "config.json",
+  "meteouib.md",
+  "assets/seus.json",
+  "assets/llindars_convectius.json",
+  "dades/playbook_work/zones_aemet.json"
+ ],
+ "_nota": "Generat amb empaqueta_previsio.py. La font canonica es la skill gestio-episodi-fma."
+}

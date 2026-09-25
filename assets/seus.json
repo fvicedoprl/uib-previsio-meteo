@@ -1,0 +1,59 @@
+{
+ "_descripcio": "Seus de la UIB i la seva zona i municipi d'AEMET. Copia reduida de la skill gestio-episodi-fma.",
+ "seus": [
+  {
+   "id": "campus_palma",
+   "nom": "Campus de Palma",
+   "zona_codi": "645404",
+   "zona_nom": "Sud de Mallorca",
+   "illa": "mallorca",
+   "municipi_aemet": "07040",
+   "municipi_nom": "Palma"
+  },
+  {
+   "id": "sa_riera",
+   "nom": "Edifici Sa Riera",
+   "zona_codi": "645404",
+   "zona_nom": "Sud de Mallorca",
+   "illa": "mallorca",
+   "municipi_aemet": "07040",
+   "municipi_nom": "Palma"
+  },
+  {
+   "id": "ca_n_oleo",
+   "nom": "Ca n'Oleo",
+   "zona_codi": "645404",
+   "zona_nom": "Sud de Mallorca",
+   "illa": "mallorca",
+   "municipi_aemet": "07040",
+   "municipi_nom": "Palma"
+  },
+  {
+   "id": "parcbit",
+   "nom": "ParcBit i annexos",
+   "zona_codi": "645404",
+   "zona_nom": "Sud de Mallorca",
+   "illa": "mallorca",
+   "municipi_aemet": "07040",
+   "municipi_nom": "Palma"
+  },
+  {
+   "id": "seu_menorca",
+   "nom": "Seu universitària de Menorca",
+   "zona_codi": "645501",
+   "zona_nom": "Menorca",
+   "illa": "menorca",
+   "municipi_aemet": "07002",
+   "municipi_nom": "Alaior"
+  },
+  {
+   "id": "seu_eivissa",
+   "nom": "Seu universitària d'Eivissa i Formentera",
+   "zona_codi": "645301",
+   "zona_nom": "Eivissa i Formentera",
+   "illa": "eivissa",
+   "municipi_aemet": "07026",
+   "municipi_nom": "Eivissa"
+  }
+ ]
+}

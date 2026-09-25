@@ -1,0 +1,112 @@
+{
+  "_descripcio": "Rangs d'orientació per interpretar els paràmetres convectius que publiquen els models. Serveixen per respondre UNA pregunta: l'atmosfera està carregada o no? No serveixen per assignar cap nivell del Protocol FMA.",
+  "_versio": "0.9.1",
+  "_data": "2026-09-14",
+  "_AVIS_IMPORTANT": [
+    "Aquests rangs NO són el Protocol FMA. Els nivells groc, taronja i vermell els assigna AEMET i ningú més; els llindars del protocol (mm/h, km/h, °C) són a llindars.json i són els únics que disparen mesures.",
+    "Aquests valors són rangs de referència d'ús general en meteorologia operativa, NO valors validats per MeteoUIB ni pel Servei de Prevenció. Estan marcats com a versió 0.9 precisament perquè els ha de revisar MeteoUIB abans de donar-los per bons.",
+    "CAPE BAIX NO DESCARTA RES a la Mediterrania: vegeu _PROBLEMA_MEDITERRANI. El tool no ha de dir mai 'estable, res a destacar' com si fos una conclusio tancada.",
+    "CAPE alt vol dir que la convecció és POSSIBLE, no que passarà: fa falta un mecanisme de dispar. CAPE baix amb pluja prevista vol dir pluja de front, no tempesta.",
+    "Són valors d'un PUNT (la seu), no d'una àrea. Una cèl·lula pot descarregar a 5 km i no tocar el punt, o al revés."
+  ],
+  "_interpretacio_conjunta": "Llegiu CAPE i Lifted Index junts, i sempre contra la precipitació prevista. Molta precipitació amb CAPE baix = pluja estratiforme (persistent, poc violenta). Poca precipitació prevista amb CAPE alt = el model no sap on posarà la cèl·lula, però l'ambient la permet: és l'escenari de setembre a Balears i el que més ha de fer estar alerta.",
+  "parametres": {
+    "cape": {
+      "nom": "CAPE",
+      "descripcio": "Energia potencial convectiva disponible. El combustible de la tempesta.",
+      "unitat": "J/kg",
+      "sentit": "com més alt, més inestable",
+      "rangs": [
+        {
+          "fins": 300,
+          "etiqueta": "estable",
+          "lectura": "Convecció poc probable o molt feble."
+        },
+        {
+          "fins": 1000,
+          "etiqueta": "inestabilitat moderada",
+          "lectura": "Tempestes possibles si hi ha mecanisme de dispar."
+        },
+        {
+          "fins": 2500,
+          "etiqueta": "inestabilitat alta",
+          "lectura": "Ambient favorable a tempestes organitzades i precipitació intensa."
+        },
+        {
+          "fins": null,
+          "etiqueta": "inestabilitat molt alta",
+          "lectura": "Ambient de tempesta severa. Cal seguiment estret i consulta a MeteoUIB."
+        }
+      ]
+    },
+    "lifted_index": {
+      "nom": "Lifted Index",
+      "descripcio": "Diferència de temperatura d'una bombolla d'aire elevada. Negatiu = inestable.",
+      "unitat": "",
+      "sentit": "com més negatiu, més inestable",
+      "invers": true,
+      "rangs": [
+        {
+          "fins": 0,
+          "etiqueta": "estable",
+          "lectura": "Atmosfera que no afavoreix la convecció."
+        },
+        {
+          "fins": -3,
+          "etiqueta": "lleugerament inestable",
+          "lectura": "Xàfecs possibles."
+        },
+        {
+          "fins": -6,
+          "etiqueta": "inestable",
+          "lectura": "Tempestes probables si hi ha dispar."
+        },
+        {
+          "fins": null,
+          "etiqueta": "molt inestable",
+          "lectura": "Ambient de tempesta forta."
+        }
+      ]
+    },
+    "convective_inhibition": {
+      "nom": "CIN (inhibició convectiva)",
+      "descripcio": "Tapa que impedeix que la convecció s'engegui. Molta CIN amb molta CAPE és l'escenari d'explosió tardana.",
+      "unitat": "J/kg",
+      "sentit": "com més negatiu, més tapada està la convecció",
+      "invers": true,
+      "rangs": [
+        {
+          "fins": -50,
+          "etiqueta": "sense tapa",
+          "lectura": "Si hi ha CAPE, la convecció s'engega amb facilitat."
+        },
+        {
+          "fins": -150,
+          "etiqueta": "tapa moderada",
+          "lectura": "Cal un dispar clar. Si es trenca, pot ser sobtat."
+        },
+        {
+          "fins": null,
+          "etiqueta": "tapa forta",
+          "lectura": "Convecció frenada, però si es trenca amb CAPE alta pot ser violenta."
+        }
+      ]
+    }
+  },
+  "_fonts_recomanades": {
+    "numeriques": "API oberta sense clau amb els camps CAPE, Lifted Index, CIN, precipitació i ratxes. S'usa NOMÉS per a orientació interna: la font oficial que dispara el protocol és sempre AEMET.",
+    "grafiques": "TRAM i WRF de MeteoUIB (meteo.uib.es). Publiquen imatges, no dades, i només conserven l'execució més recent: per això aquesta eina les arxiva.",
+    "oficial": "AEMET (avisos CAP) i METEOBAL. Són les úniques amb valor normatiu (Decret 106/2006)."
+  },
+  "_QUI_DETERMINA_AQUESTS_RANGS": {
+    "resposta_curta": "Ningu amb valor normatiu. NO son llindars oficials.",
+    "detall": "Els llindars que disparen el Protocol FMA son els d'AEMET, publicats i amb cobertura normativa (Decret 106/2006 METEOBAL). Els rangs de CAPE, en canvi, son una convencio de la meteorologia operativa: no hi ha cap organisme que els fixi, varien segons l'autor, la regio i l'estacio, i no son comparables entre models.",
+    "origen": "Els valors d'us mes estes (300 / 1000 / 2500 J/kg) provenen en bona part de la literatura de conveccio severa dels Estats Units (Grans Planes), on el motor de la tempesta es la flotabilitat pura. La Mediterrania funciona d'una altra manera."
+  },
+  "_PROBLEMA_MEDITERRANI": {
+    "avis": "A la Mediterrania es poden donar episodis severs amb CAPE que aquestes taules qualificarien d'ESTABLE. Aplicar-les sense mes pot INFRAVALORAR el risc, que es l'error perillos.",
+    "evidencia": "Cohuet, Romero, Homar, Ducrocq i Ramis (2011), 'Initiation of a severe thunderstorm over the Mediterranean Sea' (Atmospheric Research). Tres dels autors son del Departament de Fisica de la UIB. Documenten una tempesta severa en un entorn amb CAPE de superficie d'unes 62 J/kg, i assenyalen que el valor es mes alt mar endins i que la conveccio pot ser ELEVADA, per damunt d'una capa estable, cosa que el CAPE de superficie no veu.",
+    "implicacio": "Aqui manen tant o mes la disponibilitat d'aigua precipitable, el forcament dinamic i la lentitud del moviment de la cel.lula que no pas el CAPE. Per aixo TRAM publica WIND_PWA i SRH700_CAPE: no nomes CAPE."
+  },
+  "_QUINA_CAPE_LLEGIM": "No ho sabem del cert. CAPE no es una sola variable: SBCAPE (parcel.la de superficie), MLCAPE (capa mesclada) i MUCAPE (parcel.la mes inestable) donen valors molt diferents per a la mateixa atmosfera, i la conveccio elevada nomes la veu la MUCAPE. La documentacio de l'API que fem servir no especifica quina parcel.la utilitza. [PENDENT confirmar] Cal aclarir-ho abans de donar cap rang per bo."
+}

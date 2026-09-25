@@ -1,0 +1,118 @@
+{
+ "_descripcio": "Zones d'avis d'AEMET a Balears i seus que contenen. Copia reduida de la skill gestio-episodi-fma.",
+ "zones": [
+  {
+   "codi": "645401",
+   "nom_aemet": "Sierra Tramontana",
+   "nom_ca": "Serra de Tramuntana",
+   "illa": "mallorca",
+   "tipus": "terrestre",
+   "seus": []
+  },
+  {
+   "codi": "645402",
+   "nom_aemet": "Norte y nordeste de Mallorca",
+   "nom_ca": "Nord i nord-est de Mallorca",
+   "illa": "mallorca",
+   "tipus": "terrestre",
+   "seus": []
+  },
+  {
+   "codi": "645403",
+   "nom_aemet": "Interior de Mallorca",
+   "nom_ca": "Interior de Mallorca",
+   "illa": "mallorca",
+   "tipus": "terrestre",
+   "seus": []
+  },
+  {
+   "codi": "645404",
+   "nom_aemet": "Sur de Mallorca",
+   "nom_ca": "Sud de Mallorca",
+   "illa": "mallorca",
+   "tipus": "terrestre",
+   "seus": [
+    "campus_palma",
+    "sa_riera",
+    "ca_n_oleo",
+    "parcbit"
+   ]
+  },
+  {
+   "codi": "645405",
+   "nom_aemet": "Levante mallorquín",
+   "nom_ca": "Llevant mallorquí",
+   "illa": "mallorca",
+   "tipus": "terrestre",
+   "seus": []
+  },
+  {
+   "codi": "645501",
+   "nom_aemet": "Menorca",
+   "nom_ca": "Menorca",
+   "illa": "menorca",
+   "tipus": "terrestre",
+   "seus": [
+    "seu_menorca"
+   ]
+  },
+  {
+   "codi": "645301",
+   "nom_aemet": "Ibiza y Formentera",
+   "nom_ca": "Eivissa i Formentera",
+   "illa": "eivissa",
+   "tipus": "terrestre",
+   "seus": [
+    "seu_eivissa"
+   ]
+  },
+  {
+   "codi": "645401C",
+   "nom_aemet": "Costa - Sierra Tramontana",
+   "nom_ca": "Costa - Serra de Tramuntana",
+   "illa": "mallorca",
+   "tipus": "costaner",
+   "seus": []
+  },
+  {
+   "codi": "645402C",
+   "nom_aemet": "Costa - Norte y nordeste de Mallorca",
+   "nom_ca": "Costa - Nord i nord-est de Mallorca",
+   "illa": "mallorca",
+   "tipus": "costaner",
+   "seus": []
+  },
+  {
+   "codi": "645404C",
+   "nom_aemet": "Costa - Sur de Mallorca",
+   "nom_ca": "Costa - Sud de Mallorca",
+   "illa": "mallorca",
+   "tipus": "costaner",
+   "seus": []
+  },
+  {
+   "codi": "645405C",
+   "nom_aemet": "Costa - Levante mallorquín",
+   "nom_ca": "Costa - Llevant mallorquí",
+   "illa": "mallorca",
+   "tipus": "costaner",
+   "seus": []
+  },
+  {
+   "codi": "645501C",
+   "nom_aemet": "Costa - Menorca",
+   "nom_ca": "Costa - Menorca",
+   "illa": "menorca",
+   "tipus": "costaner",
+   "seus": []
+  },
+  {
+   "codi": "645301C",
+   "nom_aemet": "Costa - Ibiza y Formentera",
+   "nom_ca": "Costa - Eivissa i Formentera",
+   "illa": "eivissa",
+   "tipus": "costaner",
+   "seus": []
+  }
+ ]
+}

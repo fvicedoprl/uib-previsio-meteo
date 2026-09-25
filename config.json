@@ -1,0 +1,24 @@
+{
+  "_comentari": "Configuració de la previsió. Els destinataris NO van aquí (el repositori és públic): van al Secret EMAIL_TO, separats per comes. Les claus que comencen per _ s'ignoren.",
+
+  "llindar": "taronja",
+  "batec_hores": 6,
+  "antirebot_minuts": 90,
+  "horari_diurn": [8, 21],
+  "horitzo_hores": 48,
+  "meteouib_hores": 24,
+  "adjunta_radar": true,
+  "adjunta_llamps": true,
+  "mapes_tram": [["sr", "WIND_3hPRECIP", 12], ["sr", "WIND_3hPRECIP", 24],
+                 ["sr", "WIND_3hPRECIP", 36], ["hr", "TOTAL_PRECIP", 72]],
+
+  "_ajuda": {
+    "llindar": "groc | taronja | vermell. Nivell d'avís d'AEMET, damunt una zona amb seu, que posa en marxa el seguiment.",
+    "batec_hores": "Si passen tantes hores sense canvis, s'envia igualment una actualització «sense canvis».",
+    "antirebot_minuts": "Temps mínim entre dos correus. Una pujada de nivell se'l salta.",
+    "horari_diurn": "Hores [inici, fi) en què es pot enviar el batec. Els canvis s'envien a qualsevol hora.",
+    "horitzo_hores": "Hores de previsió municipal que es mostren a la taula de cada seu.",
+    "meteouib_hores": "Antiguitat màxima de l'aportació del Grup de Meteorologia perquè s'inclogui.",
+    "mapes_tram": "Mapes del model TRAM adjunts: [domini, camp, hores de previsió]. Llista buida = cap mapa."
+  }
+}

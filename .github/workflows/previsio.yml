@@ -1,0 +1,69 @@
+name: Previsió meteorològica — seus de la UIB
+
+# Consulta els avisos d'AEMET cada 30 minuts. Si n'hi ha de nivell taronja o superior
+# damunt alguna seu, envia la previsió per correu i la torna a enviar quan la situació
+# canvia. Si no hi ha avís, no fa res i no escriu res.
+#
+# Independent del rastrejador d'avisos (uib-fma-monitor-public): no en depèn i no el toca.
+
+on:
+  schedule:
+    # Minuts :17 i :47, perquè no coincideixi amb el rastrejador (:07 i :37), que fa
+    # servir la mateixa clau d'AEMET. GitHub no garanteix l'hora exacta.
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+    inputs:
+      forca:
+        description: "Enviar la previsió ara, encara que no hi hagi avís o no hagi canviat res"
+        type: boolean
+        default: true
+      dryrun:
+        description: "Només generar-la i mostrar-la al registre, sense enviar ni desar l'estat"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: previsio-meteo
+  cancel-in-progress: false
+
+jobs:
+  previsio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: Europe/Madrid
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generar i enviar la previsió
+        env:
+          AEMET_API_KEY:   ${{ secrets.AEMET_API_KEY }}
+          EMAIL_FROM:      ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD:  ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_SMTP_HOST: ${{ secrets.EMAIL_SMTP_HOST }}
+          EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+          EMAIL_TO:        ${{ secrets.EMAIL_TO }}
+          FORCA:           ${{ inputs.forca }}
+          DRYRUN:          ${{ inputs.dryrun }}
+        run: python executa.py
+
+      - name: Desar l'estat (només si s'ha enviat alguna cosa)
+        run: |
+          [ -f state.json ] || exit 0
+          git config user.name  "Previsio UIB Bot"
+          git config user.email "actions@github.com"
+          git add state.json
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: estat de la previsió [skip ci]"
+          git pull --rebase
+          git push
