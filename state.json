@@ -46,13 +46,6 @@
   },
   "municipal": {
    "palma": {
-    "2026-09-30T08:00": {
-     "prob_pluja": 0,
-     "prob_tempesta": 0,
-     "precip": 0.0,
-     "ratxa": 19,
-     "etiqueta": "dimecres 30, 08–14 h"
-    },
     "2026-09-30T14:00": {
      "prob_pluja": 0,
      "prob_tempesta": 0,
@@ -104,13 +97,6 @@
     }
    },
    "menorca": {
-    "2026-09-30T08:00": {
-     "prob_pluja": 20,
-     "prob_tempesta": 20,
-     "precip": 0.0,
-     "ratxa": 28,
-     "etiqueta": "dimecres 30, 08–14 h"
-    },
     "2026-09-30T14:00": {
      "prob_pluja": 10,
      "prob_tempesta": 10,
@@ -162,13 +148,6 @@
     }
    },
    "eivissa": {
-    "2026-09-30T08:00": {
-     "prob_pluja": 0,
-     "prob_tempesta": 0,
-     "precip": 0.0,
-     "ratxa": 28,
-     "etiqueta": "dimecres 30, 08–14 h"
-    },
     "2026-09-30T14:00": {
      "prob_pluja": 0,
      "prob_tempesta": 0,
@@ -222,7 +201,7 @@
   },
   "ambient": {
    "palma": {
-    "2026-09-30": "alt",
+    "2026-09-30": "molt_alt",
     "2026-10-01": "alt",
     "2026-10-02": "moderat"
    },
@@ -239,6 +218,6 @@
   },
   "meteouib": null
  },
- "enviat": "2026-09-30T13:09",
+ "enviat": "2026-09-30T16:15",
  "accio": "envia"
 }
