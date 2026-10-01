@@ -86,156 +86,177 @@
   },
   "municipal": {
    "palma": {
-    "2026-10-01T14:00": {
-     "prob_pluja": 65,
-     "prob_tempesta": 50,
-     "precip": 0.6,
-     "ratxa": 38,
-     "etiqueta": "dijous 1, 14–20 h"
-    },
     "2026-10-01T20:00": {
      "prob_pluja": 0,
      "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 34,
+     "ratxa": 35,
      "etiqueta": "dijous 1, 20–02 h"
     },
     "2026-10-02T02:00": {
      "prob_pluja": 0,
      "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 37,
+     "ratxa": 36,
      "etiqueta": "divendres 2, 02–08 h"
     },
     "2026-10-02T08:00": {
-     "prob_pluja": 20,
-     "prob_tempesta": 20,
+     "prob_pluja": 25,
+     "prob_tempesta": 25,
      "precip": 0.0,
-     "ratxa": 37,
+     "ratxa": 35,
      "etiqueta": "divendres 2, 08–14 h"
     },
     "2026-10-02T14:00": {
-     "prob_pluja": 45,
-     "prob_tempesta": 45,
-     "precip": 0.0,
-     "ratxa": 40,
+     "prob_pluja": 65,
+     "prob_tempesta": 60,
+     "precip": 0.6,
+     "ratxa": 30,
      "etiqueta": "divendres 2, 14–20 h"
     },
     "2026-10-02T20:00": {
-     "prob_pluja": 25,
-     "prob_tempesta": 25,
+     "prob_pluja": 30,
+     "prob_tempesta": 30,
      "precip": 0.0,
-     "ratxa": 29,
+     "ratxa": 26,
      "etiqueta": "divendres 2, 20–02 h"
     },
     "2026-10-03T02:00": {
-     "prob_pluja": 50,
+     "prob_pluja": 35,
      "prob_tempesta": 30,
-     "precip": 0.6,
+     "precip": 0.0,
      "ratxa": 21,
      "etiqueta": "dissabte 3, 02–08 h"
+    },
+    "2026-10-03T08:00": {
+     "prob_pluja": 80,
+     "prob_tempesta": 35,
+     "precip": 0.6,
+     "ratxa": 37,
+     "etiqueta": "dissabte 3, 08–14 h"
+    },
+    "2026-10-03T14:00": {
+     "prob_pluja": 80,
+     "prob_tempesta": 45,
+     "precip": 0.6,
+     "ratxa": 35,
+     "etiqueta": "dissabte 3, 14–20 h"
     }
    },
    "menorca": {
-    "2026-10-01T14:00": {
-     "prob_pluja": 85,
-     "prob_tempesta": 35,
-     "precip": 0.6,
-     "ratxa": 50,
-     "etiqueta": "dijous 1, 14–20 h"
-    },
     "2026-10-01T20:00": {
-     "prob_pluja": 25,
-     "prob_tempesta": 25,
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 27,
+     "ratxa": 19,
      "etiqueta": "dijous 1, 20–02 h"
     },
     "2026-10-02T02:00": {
      "prob_pluja": 5,
      "prob_tempesta": 5,
      "precip": 0.0,
-     "ratxa": 25,
+     "ratxa": 22,
      "etiqueta": "divendres 2, 02–08 h"
     },
     "2026-10-02T08:00": {
-     "prob_pluja": 35,
-     "prob_tempesta": 25,
-     "precip": 0.0,
-     "ratxa": 30,
+     "prob_pluja": 55,
+     "prob_tempesta": 45,
+     "precip": 0.6,
+     "ratxa": 27,
      "etiqueta": "divendres 2, 08–14 h"
     },
     "2026-10-02T14:00": {
-     "prob_pluja": 45,
-     "prob_tempesta": 25,
-     "precip": 0.0,
-     "ratxa": 31,
+     "prob_pluja": 75,
+     "prob_tempesta": 45,
+     "precip": 0.6,
+     "ratxa": 29,
      "etiqueta": "divendres 2, 14–20 h"
     },
     "2026-10-02T20:00": {
-     "prob_pluja": 20,
-     "prob_tempesta": 20,
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 13,
+     "ratxa": 18,
      "etiqueta": "divendres 2, 20–02 h"
     },
     "2026-10-03T02:00": {
-     "prob_pluja": 35,
-     "prob_tempesta": 35,
+     "prob_pluja": 10,
+     "prob_tempesta": 10,
      "precip": 0.0,
-     "ratxa": 14,
+     "ratxa": 19,
      "etiqueta": "dissabte 3, 02–08 h"
+    },
+    "2026-10-03T08:00": {
+     "prob_pluja": 40,
+     "prob_tempesta": 5,
+     "precip": 0.0,
+     "ratxa": 42,
+     "etiqueta": "dissabte 3, 08–14 h"
+    },
+    "2026-10-03T14:00": {
+     "prob_pluja": 55,
+     "prob_tempesta": 45,
+     "precip": 0.6,
+     "ratxa": 40,
+     "etiqueta": "dissabte 3, 14–20 h"
     }
    },
    "eivissa": {
-    "2026-10-01T14:00": {
-     "prob_pluja": 25,
-     "prob_tempesta": 10,
-     "precip": 0.0,
-     "ratxa": 34,
-     "etiqueta": "dijous 1, 14–20 h"
-    },
     "2026-10-01T20:00": {
-     "prob_pluja": 40,
-     "prob_tempesta": 40,
-     "precip": 0.0,
-     "ratxa": 37,
+     "prob_pluja": 55,
+     "prob_tempesta": 25,
+     "precip": 0.6,
+     "ratxa": 33,
      "etiqueta": "dijous 1, 20–02 h"
     },
     "2026-10-02T02:00": {
-     "prob_pluja": 80,
-     "prob_tempesta": 55,
+     "prob_pluja": 50,
+     "prob_tempesta": 35,
      "precip": 0.6,
      "ratxa": 40,
      "etiqueta": "divendres 2, 02–08 h"
     },
     "2026-10-02T08:00": {
-     "prob_pluja": 75,
-     "prob_tempesta": 60,
-     "precip": 0.2,
-     "ratxa": 47,
+     "prob_pluja": 45,
+     "prob_tempesta": 45,
+     "precip": 0.0,
+     "ratxa": 45,
      "etiqueta": "divendres 2, 08–14 h"
     },
     "2026-10-02T14:00": {
-     "prob_pluja": 65,
-     "prob_tempesta": 50,
-     "precip": 0.6,
-     "ratxa": 34,
+     "prob_pluja": 45,
+     "prob_tempesta": 45,
+     "precip": 0.0,
+     "ratxa": 42,
      "etiqueta": "divendres 2, 14–20 h"
     },
     "2026-10-02T20:00": {
      "prob_pluja": 75,
-     "prob_tempesta": 20,
+     "prob_tempesta": 30,
      "precip": 0.6,
-     "ratxa": 30,
+     "ratxa": 35,
      "etiqueta": "divendres 2, 20–02 h"
     },
     "2026-10-03T02:00": {
-     "prob_pluja": 70,
-     "prob_tempesta": 50,
+     "prob_pluja": 80,
+     "prob_tempesta": 45,
      "precip": 0.6,
-     "ratxa": 25,
+     "ratxa": 33,
      "etiqueta": "dissabte 3, 02–08 h"
+    },
+    "2026-10-03T08:00": {
+     "prob_pluja": 95,
+     "prob_tempesta": 60,
+     "precip": 1.8,
+     "ratxa": 39,
+     "etiqueta": "dissabte 3, 08–14 h"
+    },
+    "2026-10-03T14:00": {
+     "prob_pluja": 75,
+     "prob_tempesta": 55,
+     "precip": 1.2,
+     "ratxa": 20,
+     "etiqueta": "dissabte 3, 14–20 h"
     }
    }
   },
@@ -258,6 +279,6 @@
   },
   "meteouib": null
  },
- "enviat": "2026-10-01T18:29",
+ "enviat": "2026-10-01T23:24",
  "accio": "envia"
 }
