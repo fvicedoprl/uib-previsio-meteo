@@ -3,13 +3,48 @@
  "nivell_max": "taronja",
  "foto": {
   "avisos": {
+   "PR|645301": {
+    "nom": "pluges a la zona Eivissa i Formentera",
+    "finestres": [
+     [
+      "2026-10-02T00:00",
+      "2026-10-02T23:59",
+      "taronja"
+     ],
+     [
+      "2026-10-03T00:00",
+      "2026-10-03T14:59",
+      "taronja"
+     ]
+    ]
+   },
+   "TO|645301": {
+    "nom": "tempestes a la zona Eivissa i Formentera",
+    "finestres": [
+     [
+      "2026-10-02T00:00",
+      "2026-10-02T23:59",
+      "taronja"
+     ],
+     [
+      "2026-10-03T00:00",
+      "2026-10-03T14:59",
+      "taronja"
+     ]
+    ]
+   },
    "PR|645404": {
     "nom": "pluges a la zona Sud de Mallorca",
     "finestres": [
      [
-      "2026-10-01T14:00",
-      "2026-10-01T20:59",
-      "taronja"
+      "2026-10-02T10:00",
+      "2026-10-02T19:59",
+      "groc"
+     ],
+     [
+      "2026-10-03T12:00",
+      "2026-10-03T19:59",
+      "groc"
      ]
     ]
    },
@@ -17,8 +52,13 @@
     "nom": "tempestes a la zona Sud de Mallorca",
     "finestres": [
      [
-      "2026-10-01T14:00",
-      "2026-10-01T20:59",
+      "2026-10-02T10:00",
+      "2026-10-02T19:59",
+      "groc"
+     ],
+     [
+      "2026-10-03T12:00",
+      "2026-10-03T19:59",
       "groc"
      ]
     ]
@@ -27,8 +67,8 @@
     "nom": "pluges a la zona Menorca",
     "finestres": [
      [
-      "2026-10-01T14:00",
-      "2026-10-01T20:59",
+      "2026-10-03T12:00",
+      "2026-10-03T19:59",
       "groc"
      ]
     ]
@@ -37,8 +77,8 @@
     "nom": "tempestes a la zona Menorca",
     "finestres": [
      [
-      "2026-10-01T14:00",
-      "2026-10-01T20:59",
+      "2026-10-03T12:00",
+      "2026-10-03T19:59",
       "groc"
      ]
     ]
@@ -46,64 +86,57 @@
   },
   "municipal": {
    "palma": {
-    "2026-10-01T08:00": {
-     "prob_pluja": 45,
-     "prob_tempesta": 35,
-     "precip": 0.0,
-     "ratxa": 26,
-     "etiqueta": "dijous 1, 08–14 h"
-    },
     "2026-10-01T14:00": {
-     "prob_pluja": 20,
-     "prob_tempesta": 20,
-     "precip": 0.0,
-     "ratxa": 50,
+     "prob_pluja": 65,
+     "prob_tempesta": 50,
+     "precip": 0.6,
+     "ratxa": 38,
      "etiqueta": "dijous 1, 14–20 h"
     },
     "2026-10-01T20:00": {
      "prob_pluja": 0,
      "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 37,
+     "ratxa": 34,
      "etiqueta": "dijous 1, 20–02 h"
     },
     "2026-10-02T02:00": {
-     "prob_pluja": 5,
-     "prob_tempesta": 5,
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
      "precip": 0.0,
-     "ratxa": 49,
+     "ratxa": 37,
      "etiqueta": "divendres 2, 02–08 h"
     },
     "2026-10-02T08:00": {
      "prob_pluja": 20,
      "prob_tempesta": 20,
      "precip": 0.0,
-     "ratxa": 46,
+     "ratxa": 37,
      "etiqueta": "divendres 2, 08–14 h"
     },
     "2026-10-02T14:00": {
      "prob_pluja": 45,
      "prob_tempesta": 45,
      "precip": 0.0,
-     "ratxa": 45,
+     "ratxa": 40,
      "etiqueta": "divendres 2, 14–20 h"
     },
     "2026-10-02T20:00": {
      "prob_pluja": 25,
      "prob_tempesta": 25,
      "precip": 0.0,
-     "ratxa": 31,
+     "ratxa": 29,
      "etiqueta": "divendres 2, 20–02 h"
+    },
+    "2026-10-03T02:00": {
+     "prob_pluja": 50,
+     "prob_tempesta": 30,
+     "precip": 0.6,
+     "ratxa": 21,
+     "etiqueta": "dissabte 3, 02–08 h"
     }
    },
    "menorca": {
-    "2026-10-01T08:00": {
-     "prob_pluja": 65,
-     "prob_tempesta": 60,
-     "precip": 0.6,
-     "ratxa": 31,
-     "etiqueta": "dijous 1, 08–14 h"
-    },
     "2026-10-01T14:00": {
      "prob_pluja": 85,
      "prob_tempesta": 35,
@@ -155,67 +188,67 @@
     }
    },
    "eivissa": {
-    "2026-10-01T08:00": {
-     "prob_pluja": 10,
+    "2026-10-01T14:00": {
+     "prob_pluja": 25,
      "prob_tempesta": 10,
      "precip": 0.0,
-     "ratxa": 27,
-     "etiqueta": "dijous 1, 08–14 h"
-    },
-    "2026-10-01T14:00": {
-     "prob_pluja": 20,
-     "prob_tempesta": 20,
-     "precip": 0.0,
-     "ratxa": 38,
+     "ratxa": 34,
      "etiqueta": "dijous 1, 14–20 h"
     },
     "2026-10-01T20:00": {
-     "prob_pluja": 25,
-     "prob_tempesta": 25,
+     "prob_pluja": 40,
+     "prob_tempesta": 40,
      "precip": 0.0,
-     "ratxa": 49,
+     "ratxa": 37,
      "etiqueta": "dijous 1, 20–02 h"
     },
     "2026-10-02T02:00": {
-     "prob_pluja": 75,
-     "prob_tempesta": 50,
+     "prob_pluja": 80,
+     "prob_tempesta": 55,
      "precip": 0.6,
-     "ratxa": 48,
+     "ratxa": 40,
      "etiqueta": "divendres 2, 02–08 h"
     },
     "2026-10-02T08:00": {
-     "prob_pluja": 85,
+     "prob_pluja": 75,
      "prob_tempesta": 60,
-     "precip": 0.6,
-     "ratxa": 45,
+     "precip": 0.2,
+     "ratxa": 47,
      "etiqueta": "divendres 2, 08–14 h"
     },
     "2026-10-02T14:00": {
-     "prob_pluja": 55,
-     "prob_tempesta": 40,
-     "precip": 0.5,
+     "prob_pluja": 65,
+     "prob_tempesta": 50,
+     "precip": 0.6,
      "ratxa": 34,
      "etiqueta": "divendres 2, 14–20 h"
     },
     "2026-10-02T20:00": {
-     "prob_pluja": 55,
-     "prob_tempesta": 55,
-     "precip": 0.1,
-     "ratxa": 31,
+     "prob_pluja": 75,
+     "prob_tempesta": 20,
+     "precip": 0.6,
+     "ratxa": 30,
      "etiqueta": "divendres 2, 20–02 h"
+    },
+    "2026-10-03T02:00": {
+     "prob_pluja": 70,
+     "prob_tempesta": 50,
+     "precip": 0.6,
+     "ratxa": 25,
+     "etiqueta": "dissabte 3, 02–08 h"
     }
    }
   },
   "ambient": {
    "palma": {
     "2026-10-01": "alt",
-    "2026-10-02": "moderat",
-    "2026-10-03": "alt"
+    "2026-10-02": "alt",
+    "2026-10-03": "moderat"
    },
    "menorca": {
     "2026-10-01": "alt",
     "2026-10-02": "alt",
-    "2026-10-03": "alt"
+    "2026-10-03": "moderat"
    },
    "eivissa": {
     "2026-10-01": "molt_alt",
@@ -225,6 +258,6 @@
   },
   "meteouib": null
  },
- "enviat": "2026-10-01T11:02",
+ "enviat": "2026-10-01T18:29",
  "accio": "envia"
 }
