@@ -55,6 +55,57 @@
    }
   },
   "municipal": {
+   "palma": {
+    "2026-10-03T14:00": {
+     "prob_pluja": 90,
+     "prob_tempesta": 35,
+     "precip": 0.6,
+     "ratxa": 35,
+     "etiqueta": "dissabte 3, 14–20 h"
+    },
+    "2026-10-03T20:00": {
+     "prob_pluja": 60,
+     "prob_tempesta": 60,
+     "precip": 0.6,
+     "ratxa": 20,
+     "etiqueta": "dissabte 3, 20–02 h"
+    },
+    "2026-10-04T02:00": {
+     "prob_pluja": 75,
+     "prob_tempesta": 60,
+     "precip": 0.6,
+     "ratxa": 18,
+     "etiqueta": "diumenge 4, 02–08 h"
+    },
+    "2026-10-04T08:00": {
+     "prob_pluja": 70,
+     "prob_tempesta": 65,
+     "precip": 0.6,
+     "ratxa": 30,
+     "etiqueta": "diumenge 4, 08–14 h"
+    },
+    "2026-10-04T14:00": {
+     "prob_pluja": 25,
+     "prob_tempesta": 25,
+     "precip": 0.0,
+     "ratxa": 29,
+     "etiqueta": "diumenge 4, 14–20 h"
+    },
+    "2026-10-04T20:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 24,
+     "etiqueta": "diumenge 4, 20–02 h"
+    },
+    "2026-10-05T02:00": {
+     "prob_pluja": 10,
+     "prob_tempesta": 10,
+     "precip": 0.0,
+     "ratxa": 11,
+     "etiqueta": "dilluns 5, 02–08 h"
+    }
+   },
    "eivissa": {
     "2026-10-03T14:00": {
      "prob_pluja": 50,
@@ -126,6 +177,6 @@
   },
   "meteouib": null
  },
- "enviat": "2026-10-03T15:56",
+ "enviat": "2026-10-03T19:59",
  "accio": "envia"
 }
