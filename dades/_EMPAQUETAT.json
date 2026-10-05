@@ -1,5 +1,5 @@
 {
- "data": "2026-09-24",
+ "data": "2026-10-05",
  "fitxers": [
   "lib/previsio.py",
   "lib/avisos.py",
@@ -11,8 +11,6 @@
   "README.md",
   ".github/workflows/previsio.yml",
   ".gitignore",
-  "config.json",
-  "meteouib.md",
   "assets/seus.json",
   "assets/llindars_convectius.json",
   "dades/playbook_work/zones_aemet.json"

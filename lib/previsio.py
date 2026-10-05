@@ -475,7 +475,7 @@ def _pct(v):
 
 
 def taula_municipal(fs):
-    L = ["| Franja | Cel | Precipitació | Prob. pluja | Prob. tempesta | Vent (ratxa màx.) | Temperatura |",
+    L = ["| Franja | Cel | Precipitació al municipi | Prob. pluja | Prob. tempesta | Vent (ratxa màx.) | Temperatura |",
          "|---|---|---|---|---|---|---|"]
     for f in fs:
         prec = ("%s mm" % _n(f["precip"], 1)) if f["precip"] else ("inapreciable" if f["ip"] else "—")
@@ -525,11 +525,13 @@ def resum_grup(g, fs, avisos_grup, ara, amb=None):
         return None
     nom = g["municipi_nom"]
     dest = [f for f in fs if _destacable(f)]
+    contrast = contrast_avis(fs, avisos_grup, nom)
     if not dest:
         hores = round((fs[-1]["fi"] - ara).total_seconds() / 3600)
         txt = ("La previsió d'AEMET per a %s no preveu precipitació ni vent destacables en "
                "les properes %d hores." % (nom, hores))
-        if any(a["codi_aemet"] in ("PR", "TO") and NIV[a["nivell"]] >= 2 for a in avisos_grup):
+        if not contrast and any(a["codi_aemet"] in ("PR", "TO") and NIV[a["nivell"]] >= 2
+                                for a in avisos_grup):
             txt += (" És més moderada que l'avís de zona: en situacions de tempesta és habitual, "
                     "perquè els xàfecs afecten punts concrets i no es poden localitzar amb antelació.")
     else:
@@ -549,7 +551,43 @@ def resum_grup(g, fs, avisos_grup, ara, amb=None):
         txt += (" Els paràmetres atmosfèrics mostren energia disponible per a tempestes, però AEMET "
                 "no en preveu al municipi: sense un element que les desencadeni, aquesta energia no "
                 "arriba a formar tempesta.")
+    if contrast:
+        txt += " " + contrast
     return txt
+
+
+def contrast_avis(fs, avisos_grup, nom):
+    """Avis de pluja amb una quantitat molt superior a la de la previsio municipal.
+
+    Son dos productes d'AEMET que el lector veu un al costat de l'altre (p. ex. avis de
+    40 mm en 1 hora i 0,6 mm a la taula, Menorca 05/10/2026) i que no es contradiuen:
+    l'avis es refereix al que pot caure en algun punt de la zona; la previsio
+    municipal, a un valor per al municipi, que amb tempestes surt molt baix perque no
+    es pot situar on descarregaran. S'ha de dir explicitament.
+    """
+    millor = None
+    for a in avisos_grup:
+        p = a.get("parametre") or {}
+        if a["codi_aemet"] != "PR" or NIV.get(a["nivell"], 0) < 2 or p.get("num") is None \
+                or not (p.get("unitat") or "").lower().startswith("mm"):
+            continue
+        ini, fi = _local(a["onset"]), _local(a["expires"])
+        sol = [f for f in fs if f["ini"] < fi and f["fi"] > ini]
+        if not sol:
+            continue
+        f = max(sol, key=lambda x: x["precip"])
+        if f["precip"] < p["num"] / 2 and (millor is None or p["num"] > millor[0]["parametre"]["num"]):
+            millor = (a, f)
+    if not millor:
+        return None
+    a, f = millor
+    mun = ("%s mm" % _n(f["precip"], 1)) if f["precip"] else ("una quantitat inapreciable" if f["ip"]
+                                                               else "0 mm")
+    return ("L'avís d'AEMET (%s) es refereix al que pot caure en algun punt de la zona d'avís «%s»; per a %s, "
+            "la previsió municipal d'AEMET dona %s a la franja de %02d a %02d h. No es contradiuen: "
+            "en situacions de tempesta la previsió per municipi surt molt per sota de l'avís perquè "
+            "no es pot saber on descarregaran els xàfecs, i on ho facin poden arribar als valors de l'avís."
+            % (_parametre(a), a.get("zona_nom") or a.get("zona_desc"), nom, mun, f["ini"].hour, f["fi"].hour))
 
 
 # ── Ambient atmosferic (Open-Meteo, via vigilancia.py) ───────────────────────
@@ -916,6 +954,9 @@ def document(ara, accio, avisos, porta, municipal, elaborats, ambient, meteouib,
         if fs:
             L += ["**Previsió d'AEMET per a %s** _(elaborada %s)_:" % (g["municipi_nom"], elaborats.get(g["id"], "—")),
                   "", taula_municipal(fs), ""]
+            if any(a["codi_aemet"] in ("PR", "TO") for a in ag):
+                L += ["_La precipitació de la taula és la que AEMET preveu per al municipi a cada franja; "
+                      "no és el màxim que pot caure en algun punt de la zona, que és el que indica l'avís._", ""]
         else:
             L += ["_No s'ha pogut obtenir la previsió d'AEMET per a %s en aquesta actualització._"
                   % g["municipi_nom"], ""]
