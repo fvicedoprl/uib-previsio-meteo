@@ -1,6 +1,224 @@
 {
- "actiu": false,
- "tancat": "2026-10-03T23:24",
- "enviat": "2026-10-03T23:24",
- "accio": "tancament"
+ "actiu": true,
+ "nivell_max": "taronja",
+ "foto": {
+  "avisos": {
+   "PR|645501": {
+    "nom": "pluges a la zona Menorca",
+    "finestres": [
+     [
+      "2026-10-05T12:00",
+      "2026-10-05T14:59",
+      "taronja"
+     ]
+    ]
+   },
+   "TO|645501": {
+    "nom": "tempestes a la zona Menorca",
+    "finestres": [
+     [
+      "2026-10-05T12:00",
+      "2026-10-05T14:59",
+      "taronja"
+     ]
+    ]
+   }
+  },
+  "municipal": {
+   "palma": {
+    "2026-10-05T08:00": {
+     "prob_pluja": 25,
+     "prob_tempesta": 25,
+     "precip": 0.0,
+     "ratxa": 23,
+     "etiqueta": "dilluns 5, 08–14 h"
+    },
+    "2026-10-05T14:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 34,
+     "etiqueta": "dilluns 5, 14–20 h"
+    },
+    "2026-10-05T20:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 16,
+     "etiqueta": "dilluns 5, 20–02 h"
+    },
+    "2026-10-06T02:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 11,
+     "etiqueta": "dimarts 6, 02–08 h"
+    },
+    "2026-10-06T08:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 28,
+     "etiqueta": "dimarts 6, 08–14 h"
+    },
+    "2026-10-06T14:00": {
+     "prob_pluja": 35,
+     "prob_tempesta": 35,
+     "precip": 0.0,
+     "ratxa": 33,
+     "etiqueta": "dimarts 6, 14–20 h"
+    },
+    "2026-10-06T20:00": {
+     "prob_pluja": 25,
+     "prob_tempesta": 25,
+     "precip": 0.0,
+     "ratxa": 13,
+     "etiqueta": "dimarts 6, 20–02 h"
+    },
+    "2026-10-07T02:00": {
+     "prob_pluja": 45,
+     "prob_tempesta": 45,
+     "precip": 0.0,
+     "ratxa": 17,
+     "etiqueta": "dimecres 7, 02–08 h"
+    }
+   },
+   "menorca": {
+    "2026-10-05T08:00": {
+     "prob_pluja": 90,
+     "prob_tempesta": 60,
+     "precip": 0.6,
+     "ratxa": 28,
+     "etiqueta": "dilluns 5, 08–14 h"
+    },
+    "2026-10-05T14:00": {
+     "prob_pluja": 80,
+     "prob_tempesta": 55,
+     "precip": 0.6,
+     "ratxa": 27,
+     "etiqueta": "dilluns 5, 14–20 h"
+    },
+    "2026-10-05T20:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 15,
+     "etiqueta": "dilluns 5, 20–02 h"
+    },
+    "2026-10-06T02:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 11,
+     "etiqueta": "dimarts 6, 02–08 h"
+    },
+    "2026-10-06T08:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 22,
+     "etiqueta": "dimarts 6, 08–14 h"
+    },
+    "2026-10-06T14:00": {
+     "prob_pluja": 10,
+     "prob_tempesta": 10,
+     "precip": 0.0,
+     "ratxa": 22,
+     "etiqueta": "dimarts 6, 14–20 h"
+    },
+    "2026-10-06T20:00": {
+     "prob_pluja": 20,
+     "prob_tempesta": 20,
+     "precip": 0.0,
+     "ratxa": 15,
+     "etiqueta": "dimarts 6, 20–02 h"
+    },
+    "2026-10-07T02:00": {
+     "prob_pluja": 25,
+     "prob_tempesta": 25,
+     "precip": 0.0,
+     "ratxa": 24,
+     "etiqueta": "dimecres 7, 02–08 h"
+    }
+   },
+   "eivissa": {
+    "2026-10-05T08:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 30,
+     "etiqueta": "dilluns 5, 08–14 h"
+    },
+    "2026-10-05T14:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 28,
+     "etiqueta": "dilluns 5, 14–20 h"
+    },
+    "2026-10-05T20:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 13,
+     "etiqueta": "dilluns 5, 20–02 h"
+    },
+    "2026-10-06T02:00": {
+     "prob_pluja": 0,
+     "prob_tempesta": 0,
+     "precip": 0.0,
+     "ratxa": 11,
+     "etiqueta": "dimarts 6, 02–08 h"
+    },
+    "2026-10-06T08:00": {
+     "prob_pluja": 10,
+     "prob_tempesta": 10,
+     "precip": 0.0,
+     "ratxa": 34,
+     "etiqueta": "dimarts 6, 08–14 h"
+    },
+    "2026-10-06T14:00": {
+     "prob_pluja": 55,
+     "prob_tempesta": 55,
+     "precip": 0.1,
+     "ratxa": 38,
+     "etiqueta": "dimarts 6, 14–20 h"
+    },
+    "2026-10-06T20:00": {
+     "prob_pluja": 15,
+     "prob_tempesta": 15,
+     "precip": 0.0,
+     "ratxa": 21,
+     "etiqueta": "dimarts 6, 20–02 h"
+    },
+    "2026-10-07T02:00": {
+     "prob_pluja": 60,
+     "prob_tempesta": 55,
+     "precip": 0.3,
+     "ratxa": 26,
+     "etiqueta": "dimecres 7, 02–08 h"
+    }
+   }
+  },
+  "ambient": {
+   "palma": {
+    "2026-10-05": "alt",
+    "2026-10-06": "alt",
+    "2026-10-07": "alt"
+   },
+   "menorca": {
+    "2026-10-05": "molt_alt",
+    "2026-10-06": "alt",
+    "2026-10-07": "alt"
+   },
+   "eivissa": {
+    "2026-10-05": "alt",
+    "2026-10-06": "alt",
+    "2026-10-07": "alt"
+   }
+  },
+  "meteouib": null
+ },
+ "enviat": "2026-10-05T12:58",
+ "accio": "envia"
 }
