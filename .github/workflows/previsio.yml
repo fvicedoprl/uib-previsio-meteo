@@ -7,20 +7,20 @@ name: Previsió meteorològica — seus de la UIB
 # Independent del rastrejador d'avisos (uib-fma-monitor-public): no en depèn i no el toca.
 
 on:
-  schedule:
-    # Minuts :17 i :47, perquè no coincideixi amb el rastrejador (:07 i :37), que fa
-    # servir la mateixa clau d'AEMET. GitHub no garanteix l'hora exacta.
-    - cron: "17,47 * * * *"
+  # DESACTIVAT el 07/10/2026. La previsió s'executa ara dins el cicle unificat del
+  # repositori del rastrejador (cicle.yml, subcarpeta previsio/), disparat per un Worker
+  # de Cloudflare: el cron de GitHub descartava gairebé el 90 % de les execucions.
+  # Aquest workflow només queda per a execucions manuals de prova.
   workflow_dispatch:
     inputs:
       forca:
         description: "Enviar la previsió ara, encara que no hi hagi avís o no hagi canviat res"
         type: boolean
-        default: true
+        default: false
       dryrun:
         description: "Només generar-la i mostrar-la al registre, sense enviar ni desar l'estat"
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
